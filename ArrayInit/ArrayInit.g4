@@ -1,4 +1,4 @@
-grammer ArrayInit;
+grammar ArrayInit;
 init : '{' value (',' value)* '}';
 value : init 
     | INT
