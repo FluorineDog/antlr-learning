@@ -1,8 +1,16 @@
+// Generated from ArrayInit.g4 by ANTLR 4.7.2
 package ArrayInit;
-import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.tree.*;
-import ArrayInit.*;
-public class PrinterListener extends ArrayInitBaseListener{
+
+import org.antlr.v4.runtime.ParserRuleContext;
+import org.antlr.v4.runtime.tree.ErrorNode;
+import org.antlr.v4.runtime.tree.TerminalNode;
+
+/**
+ * This class provides an empty implementation of {@link ArrayInitListener},
+ * which can be extended to create a listener which only needs to handle a subset
+ * of the available methods.
+ */
+public class ArrayInitBaseListener implements ArrayInitListener {
 	/**
 	 * {@inheritDoc}
 	 *
@@ -14,17 +22,13 @@ public class PrinterListener extends ArrayInitBaseListener{
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitInit(ArrayInitParser.InitContext ctx) {
-
-	}
+	@Override public void exitInit(ArrayInitParser.InitContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterValue(ArrayInitParser.ValueContext ctx) {
-
-	}
+	@Override public void enterValue(ArrayInitParser.ValueContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
