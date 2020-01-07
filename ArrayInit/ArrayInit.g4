@@ -4,7 +4,7 @@ value : init
     | INT
     ;
 INT : [0-9]+;
-WS = [ \t\n]+ -> skip;
+WS : [ \t\n]+ -> skip;
 
 
 
