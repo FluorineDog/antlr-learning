@@ -1,14 +1,16 @@
 grammar Calculator;
 init: stmt*;
-stmt: ID '=' expr NEWLINE
-    | expr NEWLINE
-    | NEWLINE;
+stmt: ID '=' expr NEWLINE       #assign
+    | expr NEWLINE              #show
+    | NEWLINE                   #blank
+    ;
+
 expr :
-       expr ('*' | '/') expr
-     | expr ('+' | '-') expr
-     | ID
-     | NUM
-     | '(' expr ')'
+       left=expr op=('*' | '/') right=expr #MulDiv
+     | left=expr op=('+' | '-') right=expr #AddSub
+     | ID                       #id
+     | NUM                      #num
+     | '(' expr ')'             #paren
      ;
 ID: [a-zA-Z]+;
 NUM: [0-9]+;
