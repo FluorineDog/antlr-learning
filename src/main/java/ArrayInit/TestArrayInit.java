@@ -2,7 +2,7 @@ package ArrayInit;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 
-public class Test {
+public class TestArrayInit {
     public static void main(String[] args) throws Exception {
         CharStream input = CharStreams.fromString("{1, 2, 3, {4}, 5}");
         ArrayInitLexer lexer = new ArrayInitLexer(input);

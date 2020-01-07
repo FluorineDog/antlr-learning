@@ -11,8 +11,8 @@ class InterpretVisitor extends CalculatorBaseVisitor[Double] {
     val left = visit(ctx.left)
     val right = visit(ctx.right)
     ctx.op.getText match {
-      case "+" => left * right
-      case "-" => left / right
+      case "+" => left + right
+      case "-" => left - right
     }
   }
 
@@ -35,7 +35,7 @@ class InterpretVisitor extends CalculatorBaseVisitor[Double] {
 
   override def visitInit(ctx: CalculatorParser.InitContext): Double = {
     records.clear()
-    Double.NaN
+    visitChildren(ctx)
   }
 
   override def visitMulDiv(ctx: CalculatorParser.MulDivContext): Double = {
